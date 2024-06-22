@@ -1,0 +1,29 @@
+.box{
+    margin-top: 100px;
+    text-align: center;
+}
+
+body {
+    background: rgb(249, 249, 248);     
+    color: blue;            
+    font-size: 20px;        
+    font-weight: lighter;   
+    text-align: right;     
+    margin-top: 5px;        
+}
+input {
+    width: 400px;
+    border-radius: 15px;
+    border-width: 1px;
+    height: 34px;
+}
+.btn{
+    margin-top: 30px;
+    background: #dfe1e5;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+
