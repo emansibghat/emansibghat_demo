@@ -1,0 +1,21 @@
+body {
+    margin: 20px;
+}
+
+.avatar {
+    width: 150px;
+}
+
+.card {
+    border: 1px solid rgb(24, 24, 24);
+    padding: 20px;
+    display: flex;
+    background-color: rgb(238, 230, 230);
+}
+.italic{
+    font-style: italic;
+}
+.side{
+    padding: 30px;
+    font-size: 40px;
+}

@@ -1,0 +1,23 @@
+body{
+    color: aliceblue;
+    background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGxoNmpydnEwbjgycHE3ZjNha3dqcW1lMjM3b3E2MzJqOXF3dGtsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iicDrNGWxHmDrIni6j/giphy.gif");
+    background-size: cover;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    font-family: 'Orbitron', sans-serif;
+}
+button{
+    font-size: 44px;
+    background-color: aliceblue;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: inherit;
+}
+.under{
+    border-bottom: 4px solid rgb(249, 245, 245);
+    color: red;
+}
