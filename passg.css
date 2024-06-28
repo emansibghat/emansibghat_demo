@@ -1,0 +1,45 @@
+body{
+    background-image: url(train23.png);
+    background-size: cover;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(15, 14, 14);
+    text-align: center;
+    margin-top: 70px;
+}
+.container {
+    background: white;
+    max-width: 30%;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    color: rgb(250, 246, 246);
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    background-color: brown;
+}
+button:hover{
+    color: rgb(248, 241, 243);
+    background-color: rgb(10, 117, 53);
+}
+#save-btn{
+    background-color: rgb(12, 143, 62);
+    color: aliceblue;
+
+}
+#save-btn:hover{
+    color: rgb(237, 245, 240);
+    background-color:rgb(109, 10, 31) 
+}
+#save-el{
+    color: rgb(13, 14, 14);
+}
+
