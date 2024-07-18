@@ -26,23 +26,23 @@ search.addEventListener('click', () => {
             console.log('Weather condition:', json.weather[0].main);
 
             
-            let imageSrc = 'images/cloud.png'; 
+            let imageSrc = '/images/cloud.png'; 
             switch (json.weather[0].main.toLowerCase()) {
                 case 'clear':
-                    imageSrc = 'images/clear.png';
+                    imageSrc = '/images/clear.png';
                     break;
                 case 'rain':
-                    imageSrc = 'images/rain.png';
+                    imageSrc = '/images/rain.png';
                     break;
                 case 'snow':
-                    imageSrc = 'images/snow.png';
+                    imageSrc = '/images/snow.png';
                     break;
                 case 'clouds':
-                    imageSrc = 'images/cloud.png';
+                    imageSrc = '/images/cloud.png';
                     break;
                 case 'haze':
                 case 'mist':
-                    imageSrc = 'images/mist.png';
+                    imageSrc = '/images/mist.png';
                     break;
             }
             console.log('Setting image source to:', imageSrc);
