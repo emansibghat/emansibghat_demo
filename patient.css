@@ -1,0 +1,112 @@
+body {
+	background-color: #f0f0f0;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+section {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	color: #333;
+	margin-bottom: 10px;
+}
+
+p {
+	color: #666;
+	margin-bottom: 20px;
+}
+
+button {
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#mood-tracker {
+	background-color: #f0f0f0;
+	padding: 20px;
+}
+
+#mood-tracker select {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+#mood-tracker textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+#coping-strategies ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#coping-strategies ul li {
+	margin-bottom: 10px;
+}
+
+#resources ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#resources ul li {
+	margin-bottom: 10px;
+}
+
+footer {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	clear: both;
+}
+

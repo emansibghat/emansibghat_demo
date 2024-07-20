@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d3b5b5;
+    border: #d32f2f;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#current-time {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+input[type="time"] {
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#stop-alarm-btn {
+    background-color: #f44336;
+}
+
+#stop-alarm-btn:hover {
+    background-color: #d32f2f;
+}

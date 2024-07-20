@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock with Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .time {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        input, button {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="clock" class="time"></div>
+        <div id="stopwatch" class="time">00:00:00</div>
+        <input type="time" id="alarmTime">
+        <button onclick="setAlarm()">Set Alarm</button>
+        <button onclick="startStopwatch()">Start Stopwatch</button>
+        <button onclick="stopStopwatch()">Stop Stopwatch</button>
+        <button onclick="resetStopwatch()">Reset Stopwatch</button>
+    </div>
+    <script>
+        let alarmTime = null;
+        let stopwatchInterval;
+        let stopwatchTime = 0;
+
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString();
+
+            if (alarmTime && now.toLocaleTimeString().slice(0, 5) === alarmTime) {
+                alert("Alarm!");
+                const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3');
+                audio.play();
+                alarmTime = null;
+            }
+        }
+
+        function setAlarm() {
+            alarmTime = document.getElementById('alarmTime').value;
+            alert(`Alarm set for ${alarmTime}`);
+        }
+
+        function startStopwatch() {
+            stopStopwatch();
+            stopwatchInterval = setInterval(() => {
+                stopwatchTime++;
+                updateStopwatch();
+            }, 1000);
+        }
+
+        function stopStopwatch() {
+            clearInterval(stopwatchInterval);
+        }
+
+        function resetStopwatch() {
+            stopStopwatch();
+            stopwatchTime = 0;
+            updateStopwatch();
+        }
+
+        function updateStopwatch() {
+            const hours = Math.floor(stopwatchTime / 3600);
+            const minutes = Math.floor((stopwatchTime % 3600) / 60);
+            const seconds = stopwatchTime % 60;
+            document.getElementById('stopwatch').textContent = 
+                `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+        }
+
+        function pad(num) {
+            return num.toString().padStart(2, '0');
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
