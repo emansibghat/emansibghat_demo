@@ -4,7 +4,9 @@ let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-let turnO = true; //playerX, playerO
+let player1Name = '';
+let player2Name = '';
+let turnO = true; //playerO, playerX
 let count = 0; //To Track Draw
 
 const winPatterns = [
@@ -17,6 +19,24 @@ const winPatterns = [
   [3, 4, 5],
   [6, 7, 8],
 ];
+
+function startGame() {
+    player1Name = document.getElementById('player1').value;
+    player2Name = document.getElementById('player2').value;
+
+    if (player1Name && player2Name) {
+        document.getElementById('player-input').style.display = 'none';
+        document.getElementById('game-container').style.display = 'block';
+        initializeGame();
+    } else {
+        alert('Please enter names for both players');
+    }
+}
+
+function initializeGame() {
+    console.log(`Starting game with ${player1Name} (X) and ${player2Name} (O)`);
+    resetGame();
+}
 
 const resetGame = () => {
   turnO = true;
@@ -67,7 +87,8 @@ const enableBoxes = () => {
 };
 
 const showWinner = (winner) => {
-  msg.innerText = `Congratulations, Winner is ${winner}`;
+  const winnerName = winner === 'X' ? player1Name : player2Name;
+  msg.innerText = `Congratulations, ${winnerName} wins!`;
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
